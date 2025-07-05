@@ -2,7 +2,8 @@
 
 /*
 number => 2 to power 53
-bigint
+bigint 
+int
 string => ""
 boolean => true and false
 null => standalone value
