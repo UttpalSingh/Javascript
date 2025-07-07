@@ -43,7 +43,25 @@ let isBoolean = Boolean(bool)
 // console.log(+true); => 1
 // console.log(true+); => error
 
+// IN Javascript you can compare two diffrent datatypes
+// console.log("2" >= 2); => true
+// console.log("2" > 1); => true
 
+// console.log(null === 0); // false
+// console.log(null == 0); // false
+// console.log(null >= 0); // true
+
+// === it check the data with its datatypes
+//eg. console.log("2" == 2) => true
+// but console.log("2" === 2) gives you false
+
+let Data = null
+// console.log(data); // null
+// console.log(typeof data); // object
+
+let value = Number(data)
+// console.log(value) // 0
+// console.log(typeof value); // number
 
 
 
@@ -85,3 +103,5 @@ console.log(y2);
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment
 
 // ++(++x); // SyntaxError: Invalid left-hand side expression in prefix operation
+
+
