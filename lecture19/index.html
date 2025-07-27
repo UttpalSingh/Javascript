@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and remove</title>
+    <style>
+        *{
+            font-size: 25px;
+        }
+     body{
+        background-color: rgb(80, 154, 154);
+     }
+    </style>
+</head>
+<body>
+   <ul class="language">
+    <li>Javascript</li>
+    <li>Cpp</li>
+    <li>Java</li>
+   </ul>
+</body>
+<script>
+    // const ul = document.querySelector(".language")
+    // const li = document.createElement("li")
+    // li.innerText = "python"
+    // ul.appendChild(li)
+
+
+    function addLanguage (langname){
+        const li = document.createElement("li")
+        li.innerHTML = `${langname}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("python")
+    addLanguage("rust")
+
+    function addOptiLnag(langname){
+        const li = document.createElement("li")
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector(".language").appendChild(li)
+    }
+
+    addOptiLnag("goLang")
+
+
+    //edit
+    const secondLang = document.querySelector("li:nth-child(4)")
+    secondLang.innerHTML ="CSS"
+    const newli = document.createElement("li")
+    newli.innerHTML = "CSS"
+    secondLang.replaceWith(newli)
+
+    //remove
+    const lastLang = document.querySelector("li:last-child");
+    lastLang.remove()
+</script>
+</html>
