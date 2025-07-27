@@ -5,6 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
+    <style>
+        .day{
+            color: rgb(255, 0, 0);
+        }
+        .parent{
+            background-color: antiquewhite;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,7 +22,43 @@
         <p>Document Object Model amet consectetur adipisicing elit. Velit sequi porro iure molestiae architecto
             voluptatum ipsum amet, similique quas cumque soluta obcaecati consequuntur vitae quae voluptate! Et laborum
             veniam minima?</p>
+            
+            <input type="text" placeholder="Choose a day">
+            <button>Enter</button>
+
+            <div class="parent">
+                <div class="day">Monday</div>
+                <div class="day">Tuesday</div>
+                <div class="day">Wednesday</div>
+                <div class="day">Thursday</div>
+            </div>
     </div>
 </body>
+<script>
+    const parent = document.querySelector(".parent")
+    // console.log(parent);
+    // console.log(parent.firstElementChild);
 
+    // const myParent = Array.from(parent.children)
+    // for (let i = 0; i < myParent.length; i++) {
+    //     const element = myParent[i].innerHTML;
+    //     console.log(element);        
+    // }
+    parent.children[1].style.color = "green"
+    
+
+
+
+    const div = document.createElement("div")
+    div.className = "myDiv"
+    div.id = Math.round(Math.random() * 10 + 1)
+    div.setAttribute("title","generated through js")
+    div.style.backgroundColor = "brown"
+    div.style.padding = "15px"
+    div.style.margin = "10px"
+    div.innerText = "This div is created through Javascript"
+
+    document.body.appendChild(div)
+
+</script>
 </html>
