@@ -1,0 +1,25 @@
+ <!-- Event listener -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event listner</title>
+</head>
+<body>
+    <h1>Event listener</h1>
+    <button class="Button">Click me</button>
+</body>
+<script>
+    // type,timestamp,dafaultPrevented,
+    // target,toElement,srcElement,currentTarget
+    // clientX,clientY,screenX,screenY
+    // altkey,ctrlkey,shiftkey,keyCode,stop propagation
+
+    const button = document.querySelector('.Button')
+    button.addEventListener('click',(e)=>{
+        console.log(e.target);
+        
+    })
+</script>
+</html>
