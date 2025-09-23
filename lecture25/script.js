@@ -24,6 +24,33 @@ const data = new user("sanjana@gmail.com","123")
 // console.log(data.email);
 // console.log(data.password);
 
+function vigi(email,password){
+    this._email = email
+    this._password = password
+
+    Object.defineProperty(this,"email",{
+        get: function(){
+            return this._email.toUpperCase()
+        },
+        set: function(value){
+            this._email =  value
+        }
+    })
+    Object.defineProperty(this,"password",{
+        get: function(){
+            return this._password.toUpperCase()
+        },
+        set: function(value){
+            this._password =  value
+        }
+    })
+}
+const chai = new vigi('uttpal@gmail.com',1234)
+console.log(chai.email);
+
+
+
+
 
 
 const value = {
@@ -39,5 +66,5 @@ const value = {
         this._email = value
     }
 }
-const val_ue = Object.create(value)
-console.log(val_ue.email);
+// const val_ue = Object.create(value)
+// console.log(val_ue.email);
